@@ -1,4 +1,5 @@
 import Python_DHT
+import time
 import asyncio
 
 from azure.eventhub.aio import EventHubProducerClient
@@ -32,7 +33,9 @@ async def send_async(messages):
 humidity, temperature = Python_DHT.read_retry(sensor, pin)
 
 loop = asyncio.get_event_loop()
+start_time = time.time()
 loop.run_until_complete(send_async([humidity, temperature]))
 
+print("Send messages in {} seconds.".format(time.time() - start_time))
 print('Sending temperature: {0:0.1f} C'.format(temperature) + ' to Azure.') 
 print('Sending humidity:    {0:0.1f} %'.format(humidity) + ' to Azure.')
