@@ -34,6 +34,7 @@ async def send_async(messages):
 if __name__ == "__main__":
     humidity, temperature = Python_DHT.read_retry(sensor, pin)
 
+    # Wait for async request to complete.
     loop = asyncio.get_event_loop()
     start_time = time.time()
     loop.run_until_complete(send_async([humidity, temperature]))
