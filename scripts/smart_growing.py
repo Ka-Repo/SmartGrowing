@@ -39,6 +39,6 @@ if __name__ == "__main__":
     start_time = time.time()
     loop.run_until_complete(send_async([humidity, temperature]))
 
-    print("Send messages in {} seconds.".format(time.time() - start_time))
-    print('Sending temperature: {0:0.1f} C'.format(temperature) + ' to Azure.')
-    print('Sending humidity:    {0:0.1f} %'.format(humidity) + ' to Azure.')
+    print("Sent messages in {} seconds.".format(time.time() - start_time))
+    print('Sent temperature: {0:0.1f} C'.format(temperature) + ' to Azure.')
+    print('Sent humidity:    {0:0.1f} %'.format(humidity) + ' to Azure.')
