@@ -8,7 +8,7 @@
     Shell.NavBarIsVisible="False"
     mc:Ignorable="d">
     <ContentPage.Content>
-        <StackLayout Background="AntiqueWhite" VerticalOptions="Fill">
+        <StackLayout>
             <StackLayout Padding="40" VerticalOptions="CenterAndExpand">
                 <Entry Margin="20,0" Placeholder="EMAIL" />
                 <Entry Margin="20,0" Placeholder="PASSWORD" />
