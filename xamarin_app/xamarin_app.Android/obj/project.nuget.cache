@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2K4ZkA5b9nE9ILjTLqz7+8lUWxOBtRy6Fr+23I/6yJL5S66Pq0zT9iCgnCiWXHRRR3mqtSOlQpCOk0R1Y8/qXA==",
+  "dgSpecHash": "8lnYj68n1WkOnlJsS04ntKvCKRTHNPoTzUG7kXEoEPx3fmHK6Kyhee/5lSduxuW3tWHAayOj48PhNqii9l32aA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ka\\Desktop\\FH_PFORZHEIM\\WS_2021\\Projektarbeit\\SmartGrowing\\xamarin_app\\xamarin_app.Android\\xamarin_app.Android.csproj",
   "expectedPackageFiles": [
@@ -51,6 +51,7 @@
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.viewpager2\\1.0.0.8\\xamarin.androidx.viewpager2.1.0.0.8.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2012\\xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.google.android.material\\1.2.1.1\\xamarin.google.android.material.1.2.1.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],

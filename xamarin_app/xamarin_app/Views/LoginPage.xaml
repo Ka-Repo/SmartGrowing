@@ -5,15 +5,29 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="black"
     Shell.NavBarIsVisible="False"
     mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Padding="40" VerticalOptions="CenterAndExpand">
-                <Entry Margin="20,0" Placeholder="EMAIL" />
-                <Entry Margin="20,0" Placeholder="PASSWORD" />
+            <StackLayout Padding="30" VerticalOptions="CenterAndExpand">
+                <Frame
+                    Margin="10,0,10,10"
+                    Padding="0"
+                    CornerRadius="8"
+                    IsClippedToBounds="true">
+                    <Entry Placeholder="E-Mail" />
+                </Frame>
+                <Frame
+                    Margin="10,0,10,20"
+                    Padding="0"
+                    CornerRadius="8"
+                    IsClippedToBounds="true">
+                    <Entry IsPassword="True" Placeholder="Password" />
+                </Frame>
                 <Button
-                    Margin="20"
+                    Margin="10"
+                    Padding="5"
                     Command="{Binding LoginCommand}"
                     Text="Login"
                     VerticalOptions="Center" />

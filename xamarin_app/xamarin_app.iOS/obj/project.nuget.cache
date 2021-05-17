@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "tOCGP9QwrySj3q6T7wAx1MZnx8EPIeQCAWUnxo6+2RIsDf5JbK1g364cxISj3uqstOMFRnieavM0muV6lfr19g==",
+  "dgSpecHash": "qC+3lQB+U2Cr3rw4Nwx11Z6DW8Jp+TIeWNmvZA+8/sO6ray8iw+AOQIQlOvKpxFSP5a/e6SDBbIPppU/W/5nuw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ka\\Desktop\\FH_PFORZHEIM\\WS_2021\\Projektarbeit\\SmartGrowing\\xamarin_app\\xamarin_app.iOS\\xamarin_app.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ka\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2012\\xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\xamarin.ios.materialcomponents\\92.0.0\\xamarin.ios.materialcomponents.92.0.0.nupkg.sha512"
   ],
   "logs": []
 }

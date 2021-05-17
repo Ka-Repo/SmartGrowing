@@ -11,7 +11,8 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Xamarin.Essentials": "1.6.1",
-          "Xamarin.Forms": "5.0.0.2012"
+          "Xamarin.Forms": "5.0.0.2012",
+          "Xamarin.Forms.Visual.Material": "5.0.0.2012"
         },
         "runtime": {
           "xamarin_app.dll": {}
@@ -57,6 +58,11 @@
             "fileVersion": "5.0.0.671"
           }
         }
+      },
+      "Xamarin.Forms.Visual.Material/5.0.0.2012": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012"
+        }
       }
     }
   },
@@ -100,6 +106,13 @@
       "sha512": "sha512-Rqc6xvWR/sf+Db5+qRCFmuYTWVp04QWRfwPto2/JHbShSy4Ed53Q2jpoFzsoloXkJA6saD236PlaWAhT6vI4gw==",
       "path": "xamarin.forms/5.0.0.2012",
       "hashPath": "xamarin.forms.5.0.0.2012.nupkg.sha512"
+    },
+    "Xamarin.Forms.Visual.Material/5.0.0.2012": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZwYp0UpXJICPvHlgiVCdpr3WwWcMClb7rNCUlMZ93L/zJVFIGMloi49sC9l+jxvPZMStVTbptDm+BhSNszNHng==",
+      "path": "xamarin.forms.visual.material/5.0.0.2012",
+      "hashPath": "xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512"
     }
   }
 }

@@ -16,3 +16,4 @@ C:\Users\Ka\Desktop\FH_PFORZHEIM\WS_2021\Projektarbeit\SmartGrowing\xamarin_app\
 C:\Users\Ka\Desktop\FH_PFORZHEIM\WS_2021\Projektarbeit\SmartGrowing\xamarin_app\xamarin_app\obj\Debug\netstandard2.0\xamarin_app.dll
 C:\Users\Ka\Desktop\FH_PFORZHEIM\WS_2021\Projektarbeit\SmartGrowing\xamarin_app\xamarin_app\obj\Debug\netstandard2.0\ref\xamarin_app.dll
 C:\Users\Ka\Desktop\FH_PFORZHEIM\WS_2021\Projektarbeit\SmartGrowing\xamarin_app\xamarin_app\obj\Debug\netstandard2.0\xamarin_app.pdb
+C:\Users\Ka\Desktop\FH_PFORZHEIM\WS_2021\Projektarbeit\SmartGrowing\xamarin_app\xamarin_app\obj\Debug\netstandard2.0\xamarin_app.csprojAssemblyReference.cache
