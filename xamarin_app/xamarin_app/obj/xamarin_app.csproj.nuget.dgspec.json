@@ -44,6 +44,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microsoft.Azure.DocumentDB.Core": {
+              "target": "Package",
+              "version": "[2.14.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

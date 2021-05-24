@@ -2,10 +2,10 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 
 using xamarin_app.Models;
+using xamarin_app.Services;
 using xamarin_app.Views;
 
 namespace xamarin_app.ViewModels
@@ -14,7 +14,7 @@ namespace xamarin_app.ViewModels
     {
         private Item _selectedItem;
 
-        public ObservableCollection<Item> Items { get; }
+        public ObservableCollection<User> Users { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
         public Command<Item> ItemTapped { get; }
@@ -22,7 +22,7 @@ namespace xamarin_app.ViewModels
         public ItemsViewModel()
         {
             Title = "Browse";
-            Items = new ObservableCollection<Item>();
+            Users = new ObservableCollection<User>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
             ItemTapped = new Command<Item>(OnItemSelected);
@@ -32,15 +32,18 @@ namespace xamarin_app.ViewModels
 
         async Task ExecuteLoadItemsCommand()
         {
+            if (IsBusy)
+                return;
+
             IsBusy = true;
 
             try
             {
-                Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
-                foreach (var item in items)
+                Users.Clear();
+                var users = await CosmosDBService.GetUsers();
+                foreach (var user in users)
                 {
-                    Items.Add(item);
+                    Users.Add(user);
                 }
             }
             catch (Exception ex)
