@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "kueotjuuf3UC4NcrQ5LRXg/LAeT6uHpNkOoFW+E6S/koUROvpsY3Q1oKFNNcikvJsGMTVKOQRolKB4vnhU1tvw==",
+  "dgSpecHash": "ZsUNseJ1WdDHODyoUvwtlaUC2mds7I3mkwA+uicwV8MEsB8axhUZkEqaW9QzC78cJAvXAwZrialTn4qn8U+rkA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ka\\Desktop\\FH_PFORZHEIM\\WS_2021\\Projektarbeit\\SmartGrowing\\xamarin_app\\xamarin_app.iOS\\xamarin_app.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ka\\.nuget\\packages\\microsoft.azure.documentdb.core\\2.14.1\\microsoft.azure.documentdb.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\microsoft.identity.client\\4.30.0\\microsoft.identity.client.4.30.0.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\2.18.4\\microsoft.identity.client.extensions.msal.2.18.4.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\microsoft.win32.primitives\\4.0.1\\microsoft.win32.primitives.4.0.1.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\netstandard.library\\1.6.0\\netstandard.library.1.6.0.nupkg.sha512",
@@ -15,6 +18,7 @@
     "C:\\Users\\Ka\\.nuget\\packages\\system.collections.immutable\\1.3.0\\system.collections.immutable.1.3.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.collections.nongeneric\\4.0.1\\system.collections.nongeneric.4.0.1.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.collections.specialized\\4.0.1\\system.collections.specialized.4.0.1.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\system.componentmodel.typeconverter\\4.3.0\\system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.console\\4.0.0\\system.console.4.0.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.diagnostics.debug\\4.0.11\\system.diagnostics.debug.4.0.11.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.diagnostics.tools\\4.0.1\\system.diagnostics.tools.4.0.1.nupkg.sha512",
@@ -51,12 +55,14 @@
     "C:\\Users\\Ka\\.nuget\\packages\\system.runtime.interopservices\\4.1.0\\system.runtime.interopservices.4.1.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.0.0\\system.runtime.interopservices.runtimeinformation.4.0.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.runtime.numerics\\4.0.1\\system.runtime.numerics.4.0.1.nupkg.sha512",
-    "C:\\Users\\Ka\\.nuget\\packages\\system.runtime.serialization.primitives\\4.1.1\\system.runtime.serialization.primitives.4.1.1.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\system.runtime.serialization.formatters\\4.3.0\\system.runtime.serialization.formatters.4.3.0.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\system.runtime.serialization.primitives\\4.3.0\\system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.security.cryptography.algorithms\\4.2.0\\system.security.cryptography.algorithms.4.2.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.security.cryptography.encoding\\4.0.0\\system.security.cryptography.encoding.4.0.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.security.cryptography.primitives\\4.0.0\\system.security.cryptography.primitives.4.0.0.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.security.cryptography.x509certificates\\4.1.0\\system.security.cryptography.x509certificates.4.1.0.nupkg.sha512",
-    "C:\\Users\\Ka\\.nuget\\packages\\system.security.securestring\\4.0.0\\system.security.securestring.4.0.0.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\system.security.securestring\\4.3.0\\system.security.securestring.4.3.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.text.encoding\\4.0.11\\system.text.encoding.4.0.11.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.text.encoding.extensions\\4.0.11\\system.text.encoding.extensions.4.0.11.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.text.regularexpressions\\4.1.0\\system.text.regularexpressions.4.1.0.nupkg.sha512",
@@ -67,10 +73,9 @@
     "C:\\Users\\Ka\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
-    "C:\\Users\\Ka\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2012\\xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512",
-    "C:\\Users\\Ka\\.nuget\\packages\\xamarin.ios.materialcomponents\\92.0.0\\xamarin.ios.materialcomponents.92.0.0.nupkg.sha512"
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
   "logs": []
 }

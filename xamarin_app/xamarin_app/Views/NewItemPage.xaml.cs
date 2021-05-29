@@ -11,12 +11,12 @@ namespace xamarin_app.Views
 {
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
+        public Plant Item { get; set; }
 
         public NewItemPage()
         {
             InitializeComponent();
-            BindingContext = new NewItemViewModel();
+            this.BindingContext = new NewItemViewModel();
         }
     }
 }

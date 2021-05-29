@@ -26,7 +26,7 @@ namespace xamarin_app.Models
 
 		string _email;
 		[JsonProperty("email")]
-		public string Name
+		public string Email
 		{
 			get => _email;
 			set
@@ -42,7 +42,7 @@ namespace xamarin_app.Models
 
 		string _password;
 		[JsonProperty("password")]
-		public string Category
+		public string Password
 		{
 			get => _password;
 			set

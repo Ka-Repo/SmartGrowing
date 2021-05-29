@@ -25,12 +25,12 @@
             SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Padding="10" x:DataType="model:Item">
+                    <StackLayout Padding="10" x:DataType="model:Plant">
                         <Label
                             FontSize="16"
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemTextStyle}"
-                            Text="{Binding Text}" />
+                            Text="{Binding Description}" />
                         <Label
                             FontSize="13"
                             LineBreakMode="NoWrap"

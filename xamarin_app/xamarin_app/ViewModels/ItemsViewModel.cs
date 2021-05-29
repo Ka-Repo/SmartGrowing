@@ -12,12 +12,12 @@ namespace xamarin_app.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        private Item _selectedItem;
+        private Plant _selectedItem;
 
         public ObservableCollection<User> Users { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
-        public Command<Item> ItemTapped { get; }
+        public Command<Plant> ItemTapped { get; }
 
         public ItemsViewModel()
         {
@@ -25,7 +25,7 @@ namespace xamarin_app.ViewModels
             Users = new ObservableCollection<User>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            ItemTapped = new Command<Item>(OnItemSelected);
+            ItemTapped = new Command<Plant>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
         }
@@ -62,7 +62,7 @@ namespace xamarin_app.ViewModels
             SelectedItem = null;
         }
 
-        public Item SelectedItem
+        public Plant SelectedItem
         {
             get => _selectedItem;
             set
@@ -77,7 +77,7 @@ namespace xamarin_app.ViewModels
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
-        async void OnItemSelected(Item item)
+        async void OnItemSelected(Plant item)
         {
             if (item == null)
                 return;

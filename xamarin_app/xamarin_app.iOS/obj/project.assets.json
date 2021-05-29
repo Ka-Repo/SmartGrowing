@@ -44,6 +44,57 @@
           }
         }
       },
+      "Microsoft.CSharp/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "Microsoft.Identity.Client/4.30.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Runtime.Serialization.Formatters": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Security.SecureString": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.IdentityModel",
+          "System.Net.Http",
+          "System.Runtime.Serialization",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/xamarinios10/Microsoft.Identity.Client.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Microsoft.Identity.Client.dll": {}
+        }
+      },
+      "Microsoft.Identity.Client.Extensions.Msal/2.18.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Identity.Client": "4.30.0",
+          "System.Security.Cryptography.ProtectedData": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.0.1": {
         "type": "package",
         "compile": {
@@ -166,6 +217,15 @@
         }
       },
       "System.Collections.Specialized/4.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.ComponentModel.TypeConverter/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -588,7 +648,16 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.Runtime.Serialization.Primitives/4.1.1": {
+      "System.Runtime.Serialization.Formatters/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Runtime.Serialization.Primitives/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -644,6 +713,21 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Security.Cryptography.X509Certificates/4.1.0": {
         "type": "package",
         "compile": {
@@ -663,7 +747,7 @@
           }
         }
       },
-      "System.Security.SecureString/4.0.0": {
+      "System.Security.SecureString/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -772,6 +856,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Xml.XmlDocument/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
       "Xamarin.Essentials/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -912,35 +1005,14 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.Visual.Material/5.0.0.2012": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.iOS.MaterialComponents": "92.0.0"
-        },
-        "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
-        }
-      },
-      "Xamarin.iOS.MaterialComponents/92.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/Xamarin.iOS/MaterialComponents.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS/MaterialComponents.dll": {}
-        }
-      },
       "xamarin_app/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.Azure.DocumentDB.Core": "2.14.1",
+          "Microsoft.Identity.Client.Extensions.Msal": "2.18.4",
           "Xamarin.Essentials": "1.6.1",
-          "Xamarin.Forms": "5.0.0.2012",
-          "Xamarin.Forms.Visual.Material": "5.0.0.2012"
+          "Xamarin.Forms": "5.0.0.2012"
         },
         "compile": {
           "bin/placeholder/xamarin_app.dll": {}
@@ -983,6 +1055,57 @@
           "build/Microsoft.Azure.DocumentDB.Core.targets": {}
         }
       },
+      "Microsoft.CSharp/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "Microsoft.Identity.Client/4.30.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Runtime.Serialization.Formatters": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Security.SecureString": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.IdentityModel",
+          "System.Net.Http",
+          "System.Runtime.Serialization",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/xamarinios10/Microsoft.Identity.Client.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Microsoft.Identity.Client.dll": {}
+        }
+      },
+      "Microsoft.Identity.Client.Extensions.Msal/2.18.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Identity.Client": "4.30.0",
+          "System.Security.Cryptography.ProtectedData": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.0.1": {
         "type": "package",
         "compile": {
@@ -1105,6 +1228,15 @@
         }
       },
       "System.Collections.Specialized/4.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.ComponentModel.TypeConverter/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -1443,7 +1575,16 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.Runtime.Serialization.Primitives/4.1.1": {
+      "System.Runtime.Serialization.Formatters/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Runtime.Serialization.Primitives/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -1479,6 +1620,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        }
+      },
       "System.Security.Cryptography.X509Certificates/4.1.0": {
         "type": "package",
         "compile": {
@@ -1488,7 +1638,7 @@
           "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {}
         }
       },
-      "System.Security.SecureString/4.0.0": {
+      "System.Security.SecureString/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -1579,6 +1729,15 @@
         }
       },
       "System.Xml.XDocument/4.0.11": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Xml.XmlDocument/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -1727,35 +1886,14 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.Visual.Material/5.0.0.2012": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.iOS.MaterialComponents": "92.0.0"
-        },
-        "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
-        }
-      },
-      "Xamarin.iOS.MaterialComponents/92.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/Xamarin.iOS/MaterialComponents.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS/MaterialComponents.dll": {}
-        }
-      },
       "xamarin_app/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.Azure.DocumentDB.Core": "2.14.1",
+          "Microsoft.Identity.Client.Extensions.Msal": "2.18.4",
           "Xamarin.Essentials": "1.6.1",
-          "Xamarin.Forms": "5.0.0.2012",
-          "Xamarin.Forms.Visual.Material": "5.0.0.2012"
+          "Xamarin.Forms": "5.0.0.2012"
         },
         "compile": {
           "bin/placeholder/xamarin_app.dll": {}
@@ -1798,6 +1936,57 @@
           "build/Microsoft.Azure.DocumentDB.Core.targets": {}
         }
       },
+      "Microsoft.CSharp/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "Microsoft.Identity.Client/4.30.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Runtime.Serialization.Formatters": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Security.SecureString": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.IdentityModel",
+          "System.Net.Http",
+          "System.Runtime.Serialization",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/xamarinios10/Microsoft.Identity.Client.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Microsoft.Identity.Client.dll": {}
+        }
+      },
+      "Microsoft.Identity.Client.Extensions.Msal/2.18.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Identity.Client": "4.30.0",
+          "System.Security.Cryptography.ProtectedData": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.0.1": {
         "type": "package",
         "compile": {
@@ -1920,6 +2109,15 @@
         }
       },
       "System.Collections.Specialized/4.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.ComponentModel.TypeConverter/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -2258,7 +2456,16 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.Runtime.Serialization.Primitives/4.1.1": {
+      "System.Runtime.Serialization.Formatters/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Runtime.Serialization.Primitives/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -2294,6 +2501,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        }
+      },
       "System.Security.Cryptography.X509Certificates/4.1.0": {
         "type": "package",
         "compile": {
@@ -2303,7 +2519,7 @@
           "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {}
         }
       },
-      "System.Security.SecureString/4.0.0": {
+      "System.Security.SecureString/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -2394,6 +2610,15 @@
         }
       },
       "System.Xml.XDocument/4.0.11": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Xml.XmlDocument/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -2542,35 +2767,14 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.Visual.Material/5.0.0.2012": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.iOS.MaterialComponents": "92.0.0"
-        },
-        "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
-        }
-      },
-      "Xamarin.iOS.MaterialComponents/92.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/Xamarin.iOS/MaterialComponents.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS/MaterialComponents.dll": {}
-        }
-      },
       "xamarin_app/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.Azure.DocumentDB.Core": "2.14.1",
+          "Microsoft.Identity.Client.Extensions.Msal": "2.18.4",
           "Xamarin.Essentials": "1.6.1",
-          "Xamarin.Forms": "5.0.0.2012",
-          "Xamarin.Forms.Visual.Material": "5.0.0.2012"
+          "Xamarin.Forms": "5.0.0.2012"
         },
         "compile": {
           "bin/placeholder/xamarin_app.dll": {}
@@ -2613,6 +2817,57 @@
           "build/Microsoft.Azure.DocumentDB.Core.targets": {}
         }
       },
+      "Microsoft.CSharp/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "Microsoft.Identity.Client/4.30.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Runtime.Serialization.Formatters": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Security.SecureString": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.IdentityModel",
+          "System.Net.Http",
+          "System.Runtime.Serialization",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/xamarinios10/Microsoft.Identity.Client.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Microsoft.Identity.Client.dll": {}
+        }
+      },
+      "Microsoft.Identity.Client.Extensions.Msal/2.18.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Identity.Client": "4.30.0",
+          "System.Security.Cryptography.ProtectedData": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.0.1": {
         "type": "package",
         "compile": {
@@ -2735,6 +2990,15 @@
         }
       },
       "System.Collections.Specialized/4.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.ComponentModel.TypeConverter/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -3073,7 +3337,16 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.Runtime.Serialization.Primitives/4.1.1": {
+      "System.Runtime.Serialization.Formatters/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Runtime.Serialization.Primitives/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -3109,6 +3382,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        }
+      },
       "System.Security.Cryptography.X509Certificates/4.1.0": {
         "type": "package",
         "compile": {
@@ -3118,7 +3400,7 @@
           "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {}
         }
       },
-      "System.Security.SecureString/4.0.0": {
+      "System.Security.SecureString/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -3209,6 +3491,15 @@
         }
       },
       "System.Xml.XDocument/4.0.11": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Xml.XmlDocument/4.3.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -3357,35 +3648,14 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.Visual.Material/5.0.0.2012": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.iOS.MaterialComponents": "92.0.0"
-        },
-        "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
-        }
-      },
-      "Xamarin.iOS.MaterialComponents/92.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/Xamarin.iOS/MaterialComponents.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS/MaterialComponents.dll": {}
-        }
-      },
       "xamarin_app/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.Azure.DocumentDB.Core": "2.14.1",
+          "Microsoft.Identity.Client.Extensions.Msal": "2.18.4",
           "Xamarin.Essentials": "1.6.1",
-          "Xamarin.Forms": "5.0.0.2012",
-          "Xamarin.Forms.Visual.Material": "5.0.0.2012"
+          "Xamarin.Forms": "5.0.0.2012"
         },
         "compile": {
           "bin/placeholder/xamarin_app.dll": {}
@@ -3415,6 +3685,123 @@
         "microsoft.azure.documentdb.core.nuspec",
         "runtimes/win7-x64/native/Cosmos.CRTCompat.dll",
         "runtimes/win7-x64/native/Microsoft.Azure.Documents.ServiceInterop.dll"
+      ]
+    },
+    "Microsoft.CSharp/4.5.0": {
+      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "type": "package",
+      "path": "microsoft.csharp/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/Microsoft.CSharp.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/uap10.0.16299/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.nuspec",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/Microsoft.CSharp.dll",
+        "ref/netcore50/Microsoft.CSharp.xml",
+        "ref/netcore50/de/Microsoft.CSharp.xml",
+        "ref/netcore50/es/Microsoft.CSharp.xml",
+        "ref/netcore50/fr/Microsoft.CSharp.xml",
+        "ref/netcore50/it/Microsoft.CSharp.xml",
+        "ref/netcore50/ja/Microsoft.CSharp.xml",
+        "ref/netcore50/ko/Microsoft.CSharp.xml",
+        "ref/netcore50/ru/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hans/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hant/Microsoft.CSharp.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/Microsoft.CSharp.dll",
+        "ref/netstandard1.0/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/de/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/es/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/fr/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/it/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ja/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ko/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ru/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hans/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hant/Microsoft.CSharp.xml",
+        "ref/netstandard2.0/Microsoft.CSharp.dll",
+        "ref/netstandard2.0/Microsoft.CSharp.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/uap10.0.16299/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.Identity.Client/4.30.0": {
+      "sha512": "FUBWPMcA84ciczXJLRzLWod1RyKUQHAwQ/qdqhi9V+VLA4ITK9/vT7Ggs89DaxQjXnzDxXHGeXiH588RzXj9og==",
+      "type": "package",
+      "path": "microsoft.identity.client/4.30.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/Microsoft.Identity.Client.dll",
+        "lib/monoandroid10.0/Microsoft.Identity.Client.xml",
+        "lib/monoandroid90/Microsoft.Identity.Client.dll",
+        "lib/monoandroid90/Microsoft.Identity.Client.xml",
+        "lib/net45/Microsoft.Identity.Client.dll",
+        "lib/net45/Microsoft.Identity.Client.xml",
+        "lib/net461/Microsoft.Identity.Client.dll",
+        "lib/net461/Microsoft.Identity.Client.xml",
+        "lib/net5.0-windows10.0.17763/Microsoft.Identity.Client.dll",
+        "lib/net5.0-windows10.0.17763/Microsoft.Identity.Client.xml",
+        "lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
+        "lib/netcoreapp2.1/Microsoft.Identity.Client.xml",
+        "lib/netstandard1.3/Microsoft.Identity.Client.dll",
+        "lib/netstandard1.3/Microsoft.Identity.Client.xml",
+        "lib/uap10.0/Microsoft.Identity.Client.dll",
+        "lib/uap10.0/Microsoft.Identity.Client.pri",
+        "lib/uap10.0/Microsoft.Identity.Client.xml",
+        "lib/xamarinios10/Microsoft.Identity.Client.dll",
+        "lib/xamarinios10/Microsoft.Identity.Client.xml",
+        "lib/xamarinmac20/Microsoft.Identity.Client.dll",
+        "lib/xamarinmac20/Microsoft.Identity.Client.xml",
+        "microsoft.identity.client.4.30.0.nupkg.sha512",
+        "microsoft.identity.client.nuspec"
+      ]
+    },
+    "Microsoft.Identity.Client.Extensions.Msal/2.18.4": {
+      "sha512": "HpG4oLwhQsy0ce7OWq9iDdLtJKOvKRStIKoSEOeBMKuohfuOWNDyhg8fMAJkpG/kFeoe4J329fiMHcJmmB+FPw==",
+      "type": "package",
+      "path": "microsoft.identity.client.extensions.msal/2.18.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.Identity.Client.Extensions.Msal.dll",
+        "lib/net45/Microsoft.Identity.Client.Extensions.Msal.xml",
+        "lib/netcoreapp2.1/Microsoft.Identity.Client.Extensions.Msal.dll",
+        "lib/netcoreapp2.1/Microsoft.Identity.Client.Extensions.Msal.xml",
+        "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll",
+        "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.xml",
+        "microsoft.identity.client.extensions.msal.2.18.4.nupkg.sha512",
+        "microsoft.identity.client.extensions.msal.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/1.0.1": {
@@ -3794,6 +4181,59 @@
         "ref/xamarinwatchos10/_._",
         "system.collections.specialized.4.0.1.nupkg.sha512",
         "system.collections.specialized.nuspec"
+      ]
+    },
+    "System.ComponentModel.TypeConverter/4.3.0": {
+      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
+      "type": "package",
+      "path": "system.componentmodel.typeconverter/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/System.ComponentModel.TypeConverter.dll",
+        "lib/net462/System.ComponentModel.TypeConverter.dll",
+        "lib/netstandard1.0/System.ComponentModel.TypeConverter.dll",
+        "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.ComponentModel.TypeConverter.dll",
+        "ref/net462/System.ComponentModel.TypeConverter.dll",
+        "ref/netstandard1.0/System.ComponentModel.TypeConverter.dll",
+        "ref/netstandard1.0/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/de/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/es/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/fr/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/it/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/ja/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/ko/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/ru/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/zh-hans/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/zh-hant/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/System.ComponentModel.TypeConverter.dll",
+        "ref/netstandard1.5/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/de/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/es/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/fr/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/it/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/ja/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/ko/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/ru/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/zh-hans/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/zh-hant/System.ComponentModel.TypeConverter.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
+        "system.componentmodel.typeconverter.nuspec"
       ]
     },
     "System.Console/4.0.0": {
@@ -5941,10 +6381,39 @@
         "system.runtime.numerics.nuspec"
       ]
     },
-    "System.Runtime.Serialization.Primitives/4.1.1": {
-      "sha512": "HZ6Du5QrTG8MNJbf4e4qMO3JRAkIboGT5Fk804uZtg3Gq516S7hAqTm2UZKUHa7/6HUGdVy3AqMQKbns06G/cg==",
+    "System.Runtime.Serialization.Formatters/4.3.0": {
+      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
       "type": "package",
-      "path": "system.runtime.serialization.primitives/4.1.1",
+      "path": "system.runtime.serialization.formatters/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Runtime.Serialization.Formatters.dll",
+        "lib/netstandard1.4/System.Runtime.Serialization.Formatters.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Runtime.Serialization.Formatters.dll",
+        "ref/netstandard1.3/System.Runtime.Serialization.Formatters.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.serialization.formatters.4.3.0.nupkg.sha512",
+        "system.runtime.serialization.formatters.nuspec"
+      ]
+    },
+    "System.Runtime.Serialization.Primitives/4.3.0": {
+      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "type": "package",
+      "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6010,7 +6479,7 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
         "runtimes/aot/lib/netcore50/System.Runtime.Serialization.Primitives.dll",
-        "system.runtime.serialization.primitives.4.1.1.nupkg.sha512",
+        "system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
         "system.runtime.serialization.primitives.nuspec"
       ]
     },
@@ -6124,6 +6593,47 @@
         "system.security.cryptography.primitives.nuspec"
       ]
     },
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "sha512": "wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
+      "type": "package",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Security.Cryptography.ProtectedData.dll",
+        "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+        "ref/net461/System.Security.Cryptography.ProtectedData.xml",
+        "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+        "system.security.cryptography.protecteddata.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Security.Cryptography.X509Certificates/4.1.0": {
       "sha512": "4HEfsQIKAhA1+ApNn729Gi09zh+lYWwyIuViihoMDWp1vQnEkL2ct7mAbhBlLYm+x/L4Rr/pyGge1lIY635e0w==",
       "type": "package",
@@ -6180,10 +6690,10 @@
         "system.security.cryptography.x509certificates.nuspec"
       ]
     },
-    "System.Security.SecureString/4.0.0": {
-      "sha512": "sqzq9GD6/b0yqPuMpgIKBuoLf4VKAj8oAfh4kXSzPaN6eoKY3hRi9C5L27uip25qlU+BGPfb0xh2Rmbwc4jFVA==",
+    "System.Security.SecureString/4.3.0": {
+      "sha512": "PnXp38O9q/2Oe4iZHMH60kinScv6QiiL2XH54Pj2t0Y6c2zKPEiAZsM/M3wBOHLNTBDFP0zfy13WN2M0qFz5jg==",
       "type": "package",
-      "path": "system.security.securestring/4.0.0",
+      "path": "system.security.securestring/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6217,7 +6727,7 @@
         "runtimes/unix/lib/netstandard1.3/System.Security.SecureString.dll",
         "runtimes/win/lib/net46/System.Security.SecureString.dll",
         "runtimes/win/lib/netstandard1.3/System.Security.SecureString.dll",
-        "system.security.securestring.4.0.0.nupkg.sha512",
+        "system.security.securestring.4.3.0.nupkg.sha512",
         "system.security.securestring.nuspec"
       ]
     },
@@ -6853,6 +7363,45 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "System.Xml.XmlDocument/4.3.0": {
+      "sha512": "lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
+      "type": "package",
+      "path": "system.xml.xmldocument/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Xml.XmlDocument.dll",
+        "lib/netstandard1.3/System.Xml.XmlDocument.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Xml.XmlDocument.dll",
+        "ref/netstandard1.3/System.Xml.XmlDocument.dll",
+        "ref/netstandard1.3/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/de/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/es/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/fr/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/it/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/ja/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/ko/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/ru/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/zh-hans/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/zh-hant/System.Xml.XmlDocument.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.xml.xmldocument.4.3.0.nupkg.sha512",
+        "system.xml.xmldocument.nuspec"
+      ]
+    },
     "Xamarin.Essentials/1.6.1": {
       "sha512": "gG1Bp4j4bpJQ0dp9MeBJQJ9c8xULauIlhc7Cx5Qw4J2K1c+4Glq5n+gkb9Pm0UA/CevXVqLK5ZXmZkuYI52FgA==",
       "type": "package",
@@ -7120,41 +7669,6 @@
         "xamarin.forms.nuspec"
       ]
     },
-    "Xamarin.Forms.Visual.Material/5.0.0.2012": {
-      "sha512": "ZwYp0UpXJICPvHlgiVCdpr3WwWcMClb7rNCUlMZ93L/zJVFIGMloi49sC9l+jxvPZMStVTbptDm+BhSNszNHng==",
-      "type": "package",
-      "path": "xamarin.forms.visual.material/5.0.0.2012",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Assets/xamarin_128x128.png",
-        "build/MonoAndroid10/Xamarin.Forms.Visual.Material.targets",
-        "buildTransitive/MonoAndroid10/Xamarin.Forms.Visual.Material.targets",
-        "lib/MonoAndroid10.0/Xamarin.Forms.Material.dll",
-        "lib/MonoAndroid10.0/Xamarin.Forms.Material.pdb",
-        "lib/MonoAndroid10/_._",
-        "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll",
-        "lib/Xamarin.iOS10/Xamarin.Forms.Material.pdb",
-        "lib/netstandard1.0/_._",
-        "lib/tizen40/Xamarin.Forms.Material.dll",
-        "lib/tizen40/Xamarin.Forms.Material.pdb",
-        "xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512",
-        "xamarin.forms.visual.material.nuspec"
-      ]
-    },
-    "Xamarin.iOS.MaterialComponents/92.0.0": {
-      "sha512": "I0mVxJBHsaR2NtFbZmafSLmIB4FUOSfSOf1SW3i2UA0TyoWr+F0AdrLtPRQtXq97LUg0fEnWhaq+4suVxbDbFw==",
-      "type": "package",
-      "path": "xamarin.ios.materialcomponents/92.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "THIRD-PARTY-NOTICES.txt",
-        "lib/Xamarin.iOS/MaterialComponents.dll",
-        "xamarin.ios.materialcomponents.92.0.0.nupkg.sha512",
-        "xamarin.ios.materialcomponents.nuspec"
-      ]
-    },
     "xamarin_app/1.0.0": {
       "type": "project",
       "path": "../xamarin_app/xamarin_app.csproj",
@@ -7164,9 +7678,9 @@
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
       "Microsoft.Azure.DocumentDB.Core >= 2.14.1",
+      "Microsoft.Identity.Client.Extensions.Msal >= 2.18.4",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012",
-      "Xamarin.Forms.Visual.Material >= 5.0.0.2012",
       "xamarin_app >= 1.0.0"
     ]
   },
@@ -7216,15 +7730,15 @@
             "target": "Package",
             "version": "[2.14.1, )"
           },
+          "Microsoft.Identity.Client.Extensions.Msal": {
+            "target": "Package",
+            "version": "[2.18.4, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.6.1, )"
           },
           "Xamarin.Forms": {
-            "target": "Package",
-            "version": "[5.0.0.2012, )"
-          },
-          "Xamarin.Forms.Visual.Material": {
             "target": "Package",
             "version": "[5.0.0.2012, )"
           }

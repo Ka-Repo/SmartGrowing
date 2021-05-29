@@ -49,10 +49,9 @@ namespace xamarin_app.ViewModels
 
         private async void OnSave()
         {
-            Item newItem = new Item()
+            Plant newItem = new Plant()
             {
                 Id = Guid.NewGuid().ToString(),
-                Text = Text,
                 Description = Description
             };
 

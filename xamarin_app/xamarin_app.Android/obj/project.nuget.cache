@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2/hVkNw0Wg7s62XnAbQiKyURcj8ugScsFa7sqsK4HYYvfocmqAfEMiUYlQf6mhn6zVAF1uoQ2/XgV7KtI8gsLg==",
+  "dgSpecHash": "aET2ZCXhUyd/rMB0tGZfQukUP84WLKIRUUYU4G7T49tHrIXx/Opdp3TKdk6W8d3HsWqPo6by+H4akA8eQ1n24Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ka\\Desktop\\FH_PFORZHEIM\\WS_2021\\Projektarbeit\\SmartGrowing\\xamarin_app\\xamarin_app.Android\\xamarin_app.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ka\\.nuget\\packages\\microsoft.azure.documentdb.core\\2.14.1\\microsoft.azure.documentdb.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\microsoft.identity.client\\4.30.0\\microsoft.identity.client.4.30.0.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\2.18.4\\microsoft.identity.client.extensions.msal.2.18.4.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\microsoft.win32.primitives\\4.0.1\\microsoft.win32.primitives.4.0.1.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\netstandard.library\\1.6.0\\netstandard.library.1.6.0.nupkg.sha512",
@@ -55,8 +57,9 @@
     "C:\\Users\\Ka\\.nuget\\packages\\system.security.cryptography.algorithms\\4.2.0\\system.security.cryptography.algorithms.4.2.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.security.cryptography.encoding\\4.0.0\\system.security.cryptography.encoding.4.0.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.security.cryptography.primitives\\4.0.0\\system.security.cryptography.primitives.4.0.0.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.security.cryptography.x509certificates\\4.1.0\\system.security.cryptography.x509certificates.4.1.0.nupkg.sha512",
-    "C:\\Users\\Ka\\.nuget\\packages\\system.security.securestring\\4.0.0\\system.security.securestring.4.0.0.nupkg.sha512",
+    "C:\\Users\\Ka\\.nuget\\packages\\system.security.securestring\\4.3.0\\system.security.securestring.4.3.0.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.text.encoding\\4.0.11\\system.text.encoding.4.0.11.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.text.encoding.extensions\\4.0.11\\system.text.encoding.extensions.4.0.11.nupkg.sha512",
     "C:\\Users\\Ka\\.nuget\\packages\\system.text.regularexpressions\\4.1.0\\system.text.regularexpressions.4.1.0.nupkg.sha512",
@@ -113,7 +116,6 @@
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.viewpager2\\1.0.0.8\\xamarin.androidx.viewpager2.1.0.0.8.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
-    "C:\\Users\\Ka\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2012\\xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.google.android.material\\1.2.1.1\\xamarin.google.android.material.1.2.1.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],

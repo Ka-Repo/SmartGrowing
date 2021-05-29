@@ -6,55 +6,55 @@ using xamarin_app.Models;
 
 namespace xamarin_app.Services
 {
-    public class MockDataStore : IDataStore<Item>
+    public class MockDataStore : IDataStore<Plant>
     {
-        readonly List<Item> items;
+        readonly List<Plant> plants;
 
         public MockDataStore()
         {
-            items = new List<Item>()
+            plants = new List<Plant>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new Plant { Id = Guid.NewGuid().ToString(), Name="Plant1", Description="This is an plant description." , Humidity="12", Temperature="33" },
+                new Plant { Id = Guid.NewGuid().ToString(), Name="Plant2", Description="This is an plant description." , Humidity="132", Temperature="55" },
+                new Plant { Id = Guid.NewGuid().ToString(), Name="Plant4", Description="This is an plant description." , Humidity="22", Temperature="15" },
+                new Plant { Id = Guid.NewGuid().ToString(), Name="Plant4", Description="This is an plant description." , Humidity="92", Temperature="90" },
+                new Plant { Id = Guid.NewGuid().ToString(), Name="Plant5", Description="This is an plant description." , Humidity="133", Temperature="120" },
+                new Plant { Id = Guid.NewGuid().ToString(), Name="Plant6", Description="This is an plant description." , Humidity="100", Temperature="200" },
             };
         }
 
-        public async Task<bool> AddItemAsync(Item item)
+        public async Task<bool> AddItemAsync(Plant plant)
         {
-            items.Add(item);
+            plants.Add(plant);
 
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> UpdateItemAsync(Item item)
+        public async Task<bool> UpdateItemAsync(Plant plant)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
-            items.Remove(oldItem);
-            items.Add(item);
+            var oldItem = plants.Where((Plant arg) => arg.Id == plant.Id).FirstOrDefault();
+            plants.Remove(oldItem);
+            plants.Add(plant);
 
             return await Task.FromResult(true);
         }
 
         public async Task<bool> DeleteItemAsync(string id)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
-            items.Remove(oldItem);
+            var oldItem = plants.Where((Plant arg) => arg.Id == id).FirstOrDefault();
+            plants.Remove(oldItem);
 
             return await Task.FromResult(true);
         }
 
-        public async Task<Item> GetItemAsync(string id)
+        public async Task<Plant> GetItemAsync(string id)
         {
-            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+            return await Task.FromResult(plants.FirstOrDefault(s => s.Id == id));
         }
 
-        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<Plant>> GetItemsAsync(bool forceRefresh = false)
         {
-            return await Task.FromResult(items);
+            return await Task.FromResult(plants);
         }
     }
 }

@@ -9,24 +9,11 @@
     mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout Margin="30" VerticalOptions="CenterAndExpand">
-            <Frame
-                Margin="10,0,10,10"
-                Padding="0"
-                CornerRadius="8"
-                IsClippedToBounds="true">
-                <Entry Keyboard="Email" Placeholder="E-Mail" />
-            </Frame>
-            <Frame
-                Margin="10,0,10,20"
-                Padding="0"
-                CornerRadius="8"
-                IsClippedToBounds="true">
-                <Entry IsPassword="True" Placeholder="Password" />
-            </Frame>
             <Button
+                x:Name="loginButton"
                 Margin="10"
                 Padding="5"
-                Command="{Binding LoginCommand}"
+                Clicked="OnLoginButtonClicked"
                 Text="sign in"
                 VerticalOptions="Center" />
         </StackLayout>

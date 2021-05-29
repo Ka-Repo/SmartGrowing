@@ -53,7 +53,6 @@
             </Style>
             <Style ApplyToDerivedTypes="True" TargetType="ContentPage">
                 <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
-                <Setter Property="Visual" Value="Material" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

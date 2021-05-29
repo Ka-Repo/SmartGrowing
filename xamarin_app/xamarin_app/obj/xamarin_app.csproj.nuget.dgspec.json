@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[2.14.1, )"
             },
+            "Microsoft.Identity.Client.Extensions.Msal": {
+              "target": "Package",
+              "version": "[2.18.4, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -59,10 +63,6 @@
               "version": "[1.6.1, )"
             },
             "Xamarin.Forms": {
-              "target": "Package",
-              "version": "[5.0.0.2012, )"
-            },
-            "Xamarin.Forms.Visual.Material": {
               "target": "Package",
               "version": "[5.0.0.2012, )"
             }

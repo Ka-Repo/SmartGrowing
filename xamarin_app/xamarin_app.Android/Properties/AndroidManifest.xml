@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.xamarin_app">
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
-    <application android:label="xamarin_app.Android" android:theme="@style/MainTheme"></application>
+    <application android:label="xamarin_app.Android" android:theme="@style/MainTheme">
+      <activity android:name="microsoft.identity.client.BrowserTabActivity">
+        <intent-filter>
+          <action android:name="android.intent.action.VIEW" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
+          <data android:scheme="msal63a8c700-41e9-45c2-973e-8e33e5fb687d://auth" android:host="auth" />
+        </intent-filter>
+      </activity>
+    </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
