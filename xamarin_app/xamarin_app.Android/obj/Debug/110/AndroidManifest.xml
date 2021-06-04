@@ -16,7 +16,7 @@
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="msal63a8c700-41e9-45c2-973e-8e33e5fb687d://auth" android:host="auth" />
+        <data android:scheme="msal63a8c700-41e9-45c2-973e-8e33e5fb687d" android:host="auth" />
       </intent-filter>
     </activity>
     <activity android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:icon="@mipmap/icon" android:label="xamarin_app" android:theme="@style/MainTheme" android:name="crc64d6721d4114a304de.MainActivity">
