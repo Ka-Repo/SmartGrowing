@@ -4,13 +4,14 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 using xamarin_app.Models;
+using xamarin_app.Services;
 
 namespace xamarin_app.ViewModels
 {
     public class NewItemViewModel : BaseViewModel
     {
-        private string text;
         private string description;
+        private string name;
 
         public NewItemViewModel()
         {
@@ -22,20 +23,20 @@ namespace xamarin_app.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(text)
+            return !String.IsNullOrWhiteSpace(name)
                 && !String.IsNullOrWhiteSpace(description);
-        }
-
-        public string Text
-        {
-            get => text;
-            set => SetProperty(ref text, value);
         }
 
         public string Description
         {
             get => description;
             set => SetProperty(ref description, value);
+        }
+
+        public string Name
+        {
+            get => name;
+            set => SetProperty(ref name, value);
         }
 
         public Command SaveCommand { get; }
@@ -49,13 +50,16 @@ namespace xamarin_app.ViewModels
 
         private async void OnSave()
         {
-            Plant newItem = new Plant()
+            Plant newPlant = new Plant()
             {
                 Id = Guid.NewGuid().ToString(),
-                Description = Description
+                Name = Name,
+                Description = Description,
+                Humidity = "0",
+                Temperature = "0"
             };
 
-            await DataStore.AddItemAsync(newItem);
+            await CosmosDBService.AddPlant(newPlant);
 
             // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");

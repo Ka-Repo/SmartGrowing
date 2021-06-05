@@ -75,5 +75,33 @@ namespace xamarin_app.Services
 
             return plants;
         }
+
+        public async static Task AddPlant(Plant plant)
+        {
+            if (!await Initialize())
+                return;
+
+            await docClient.CreateDocumentAsync(
+                UriFactory.CreateDocumentCollectionUri(databaseName, collectionName),
+                plant);
+        }
+
+        public async static Task UpdatePlant(Plant plant)
+        {
+            if (!await Initialize())
+                return;
+
+            var docUri = UriFactory.CreateDocumentUri(databaseName, collectionName, plant.Id);
+            await docClient.ReplaceDocumentAsync(docUri, plant);
+        }
+
+        public async static Task DeleteToDoItem(Plant plant)
+        {
+            if (!await Initialize())
+                return;
+
+            var docUri = UriFactory.CreateDocumentUri(databaseName, collectionName, plant.Id);
+            await docClient.DeleteDocumentAsync(docUri);
+        }
     }
 }

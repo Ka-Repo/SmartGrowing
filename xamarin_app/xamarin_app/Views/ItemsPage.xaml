@@ -24,24 +24,49 @@
             SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Padding="10" x:DataType="model:Plant">
-                        <Label
-                            FontSize="16"
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemTextStyle}"
-                            Text="{Binding Description}" />
-                        <Label
-                            FontSize="13"
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            Text="{Binding Humidity}" />
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"
-                                CommandParameter="{Binding .}"
-                                NumberOfTapsRequired="1" />
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
+                    <Frame
+                        Margin="0"
+                        Padding="20,20,20,0"
+                        BackgroundColor="{StaticResource Primary}">
+                        <Frame
+                            BackgroundColor="White"
+                            CornerRadius="5"
+                            HasShadow="True"
+                            IsClippedToBounds="True">
+                            <StackLayout
+                                Padding="10"
+                                x:DataType="model:Plant"
+                                BackgroundColor="{StaticResource Secondary}">
+                                <Label
+                                    FontSize="16"
+                                    LineBreakMode="NoWrap"
+                                    Style="{DynamicResource ListItemTextStyle}"
+                                    Text="{Binding Name}"
+                                    TextColor="Black" />
+                                <Label
+                                    FontSize="13"
+                                    LineBreakMode="NoWrap"
+                                    Style="{DynamicResource ListItemDetailTextStyle}"
+                                    Text="{Binding Description}" />
+                                <Label
+                                    FontSize="13"
+                                    LineBreakMode="NoWrap"
+                                    Style="{DynamicResource ListItemDetailTextStyle}"
+                                    Text="{Binding Humidity}" />
+                                <Label
+                                    FontSize="13"
+                                    LineBreakMode="NoWrap"
+                                    Style="{DynamicResource ListItemDetailTextStyle}"
+                                    Text="{Binding Temperature}" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"
+                                        CommandParameter="{Binding .}"
+                                        NumberOfTapsRequired="1" />
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
