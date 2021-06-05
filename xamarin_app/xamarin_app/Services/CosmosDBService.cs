@@ -8,6 +8,7 @@ using System;
 using System.Diagnostics;
 using Microsoft.Azure.Documents.Linq;
 using xamarin_app.Helpers;
+using xamarin_app.Models;
 
 namespace xamarin_app.Services
 {
@@ -16,7 +17,7 @@ namespace xamarin_app.Services
         static DocumentClient docClient = null;
 
         static readonly string databaseName = "Tasks";
-        static readonly string collectionName = "Users";
+        static readonly string collectionName = "Plants";
 
         static async Task<bool> Initialize()
         {
@@ -52,27 +53,27 @@ namespace xamarin_app.Services
             return true;
         }
 
-        public async static Task<List<Models.User>> GetUsers()
+        public async static Task<List<Plant>> GetPlants()
         {
-            var users = new List<Models.User>();
+            var plants = new List<Plant>();
 
             if (!await Initialize())
-                return users;
+                return plants;
 
-            var todoQuery = docClient.CreateDocumentQuery<Models.User>(
+            var todoQuery = docClient.CreateDocumentQuery<Plant>(
                 UriFactory.CreateDocumentCollectionUri(databaseName, collectionName),
                 new FeedOptions { MaxItemCount = -1, EnableCrossPartitionQuery = true })
-                .Where(user => user.Id != "12")
+                .Where(plant => plant.Id != "12")
                 .AsDocumentQuery();
 
             while (todoQuery.HasMoreResults)
             {
-                var queryResults = await todoQuery.ExecuteNextAsync<Models.User>();
+                var queryResults = await todoQuery.ExecuteNextAsync<Plant>();
 
-                users.AddRange(queryResults);
+                plants.AddRange(queryResults);
             }
 
-            return users;
+            return plants;
         }
     }
 }

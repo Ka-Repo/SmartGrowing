@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using xamarin_app.Services;
 
 namespace xamarin_app.ViewModels
 {
@@ -9,10 +10,9 @@ namespace xamarin_app.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+            LogoutCommand = new Command(async () => await AuthService.Logout());
         }
 
-        public ICommand OpenWebCommand { get; }
+        public ICommand LogoutCommand { get; }
     }
 }

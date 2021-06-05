@@ -642,3 +642,5 @@ C:\Users\Ka\Desktop\FH_PFORZHEIM\WS_2021\Projektarbeit\SmartGrowing\xamarin_app\
 C:\Users\Ka\Desktop\FH_PFORZHEIM\WS_2021\Projektarbeit\SmartGrowing\xamarin_app\xamarin_app.Android\obj\Debug\110\lp\76\jl\files.cache
 C:\Users\Ka\Desktop\FH_PFORZHEIM\WS_2021\Projektarbeit\SmartGrowing\xamarin_app\xamarin_app.Android\obj\Debug\110\lp\80\jl\files.cache
 C:\Users\Ka\Desktop\FH_PFORZHEIM\WS_2021\Projektarbeit\SmartGrowing\xamarin_app\xamarin_app.Android\obj\Debug\110\lp\88\jl\files.cache
+C:\Users\Ka\Desktop\FH_PFORZHEIM\WS_2021\Projektarbeit\SmartGrowing\xamarin_app\xamarin_app.Android\obj\Debug\110\res\drawable\icon_logout.png
+C:\Users\Ka\Desktop\FH_PFORZHEIM\WS_2021\Projektarbeit\SmartGrowing\xamarin_app\xamarin_app.Android\obj\Debug\110\res\drawable\icon_add.png

@@ -14,15 +14,14 @@ namespace xamarin_app.ViewModels
     {
         private Plant _selectedItem;
 
-        public ObservableCollection<User> Users { get; }
+        public ObservableCollection<Plant> Plants { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
         public Command<Plant> ItemTapped { get; }
 
         public ItemsViewModel()
         {
-            Title = "Browse";
-            Users = new ObservableCollection<User>();
+            Plants = new ObservableCollection<Plant>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
             ItemTapped = new Command<Plant>(OnItemSelected);
@@ -32,18 +31,18 @@ namespace xamarin_app.ViewModels
 
         async Task ExecuteLoadItemsCommand()
         {
-            if (IsBusy)
-                return;
+            // if (IsBusy)
+            //    return;
 
             IsBusy = true;
 
             try
             {
-                Users.Clear();
-                var users = await CosmosDBService.GetUsers();
-                foreach (var user in users)
+                Plants.Clear();
+                var plants = await CosmosDBService.GetPlants();
+                foreach (var plant in plants)
                 {
-                    Users.Add(user);
+                    Plants.Add(plant);
                 }
             }
             catch (Exception ex)

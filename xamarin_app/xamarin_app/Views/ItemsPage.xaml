@@ -5,11 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:xamarin_app.ViewModels"
     xmlns:model="clr-namespace:xamarin_app.Models"
-    x:Name="BrowseItemsPage"
-    Title="{Binding Title}">
+    x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding AddItemCommand}" Text="Add" />
+        <ToolbarItem Command="{Binding AddItemCommand}" IconImageSource="icon_add.png" />
     </ContentPage.ToolbarItems>
     <!--
         x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
@@ -21,7 +20,7 @@
         IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
         <CollectionView
             x:Name="ItemsListView"
-            ItemsSource="{Binding Users}"
+            ItemsSource="{Binding Plants}"
             SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
@@ -35,7 +34,7 @@
                             FontSize="13"
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
-                            Text="{Binding Description}" />
+                            Text="{Binding Humidity}" />
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"

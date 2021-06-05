@@ -8,28 +8,14 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">#131313</Color>
-            <Color x:Key="Secondary">#333333</Color>
-            <Color x:Key="TextColor">white</Color>
-            <Color x:Key="TextColorLight">#E2E2E2</Color>
+            <Color x:Key="Primary">#EFEFEF</Color>
+            <Color x:Key="Secondary">#FFFFFF</Color>
+            <Color x:Key="TextColor">#C5C5C5</Color>
+            <Color x:Key="TextColorLight">#D5D5D5</Color>
+            <Color x:Key="TextColorDark">#333333</Color>
             <Style TargetType="Button">
-                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
-                <Setter Property="VisualStateManager.VisualStateGroups">
-                    <VisualStateGroupList>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Secondary}" />
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState x:Name="Disabled">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="#332196F3" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateGroupList>
-                </Setter>
+                <Setter Property="TextColor" Value="{StaticResource TextColorDark}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource TextColor}" />
             </Style>
             <Style TargetType="Entry">
                 <Setter Property="TextColor" Value="{StaticResource TextColorLight}" />

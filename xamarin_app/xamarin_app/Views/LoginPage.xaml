@@ -15,7 +15,8 @@
                 Padding="5"
                 Clicked="OnLoginButtonClicked"
                 Text="sign in"
-                VerticalOptions="Center" />
+                VerticalOptions="Center" 
+                />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
