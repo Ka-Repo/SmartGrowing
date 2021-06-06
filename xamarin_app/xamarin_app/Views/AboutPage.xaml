@@ -3,11 +3,8 @@
     x:Class="xamarin_app.Views.AboutPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:vm="clr-namespace:xamarin_app.ViewModels">
-
-    <ContentPage.BindingContext>
-        <vm:AboutViewModel />
-    </ContentPage.BindingContext>
+    xmlns:vm="clr-namespace:xamarin_app.ViewModels"
+    Title="{Binding ActivePlant.Name}">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Command="{Binding LogoutCommand}" IconImageSource="icon_logout.png" />
@@ -67,7 +64,7 @@
                                     <Span
                                         FontAttributes="Bold"
                                         FontSize="40"
-                                        Text="0" />
+                                        Text="{Binding ActivePlant.Humidity}" />
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -117,7 +114,7 @@
                                     <Span
                                         FontAttributes="Bold"
                                         FontSize="40"
-                                        Text="0" />
+                                        Text="{Binding ActivePlant.Temperature}" />
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>

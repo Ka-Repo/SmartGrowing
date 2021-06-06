@@ -81,8 +81,10 @@ namespace xamarin_app.ViewModels
             if (item == null)
                 return;
 
+            AboutViewModel.plantIndex = Plants.IndexOf(item);
+
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
+            // await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
         }
     }
 }
