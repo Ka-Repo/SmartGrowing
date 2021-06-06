@@ -1,30 +1,47 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Azure.EventHubs;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+using System.Linq;
+using Newtonsoft.Json;
 
 namespace SmartGrowing.Function
 {
+    public class Plant
+    {
+        [JsonProperty("id")]
+        public string id { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public string temperature { get; set; }
+        public string humidity { get; set; }
+    }
+
     public static class EventHubTrigger
     {
         [FunctionName("EventHubTrigger")]
-        public static async Task Run([EventHubTrigger("smartgrowingeventhub", Connection = "AzureEventHubConnectionString")] EventData[] events, ILogger log)
+        public static void Run([EventHubTrigger("smartgrowingeventhub", Connection = "AzureEventHubConnectionString")] EventData[] events,
+            [CosmosDB(
+                databaseName: "Tasks",
+                collectionName: "Plants",
+                ConnectionStringSetting = "CosmosDBConnection",
+                PartitionKey = "111")]out Plant item,
+            ILogger log)
         {
+            string temperature = "";
+            string humidity = "";
+
             var exceptions = new List<Exception>();
 
             foreach (EventData eventData in events)
             {
                 try
                 {
-                    string messageBody = Encoding.UTF8.GetString(eventData.Body.Array, eventData.Body.Offset, eventData.Body.Count);
-
-                    // Replace these two lines with your processing logic.
-                    log.LogInformation($"C# Event Hub trigger function processed a message: {messageBody}");
-                    await Task.Yield();
+                    humidity = eventData.Body[0].ToString();
+                    temperature = eventData.Body[1].ToString();
                 }
                 catch (Exception e)
                 {
@@ -41,6 +58,8 @@ namespace SmartGrowing.Function
 
             if (exceptions.Count == 1)
                 throw exceptions.Single();
+
+            item = new Plant { id = "1", name = "Plant 1", description = "Plant next to me.", humidity = humidity, temperature = temperature };
         }
     }
 }
