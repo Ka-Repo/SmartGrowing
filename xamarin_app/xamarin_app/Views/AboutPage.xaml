@@ -64,7 +64,7 @@
                                     <Span
                                         FontAttributes="Bold"
                                         FontSize="40"
-                                        Text="{Binding ActivePlant.Humidity}" />
+                                        Text="{Binding Path=ActivePlant.Humidity, StringFormat='{0:F2} %'}" />
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -114,7 +114,7 @@
                                     <Span
                                         FontAttributes="Bold"
                                         FontSize="40"
-                                        Text="{Binding ActivePlant.Temperature}" />
+                                        Text="{Binding Path=ActivePlant.Temperature, StringFormat='{0:F2} C'}" />
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>

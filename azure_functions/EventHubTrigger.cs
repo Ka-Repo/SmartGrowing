@@ -31,8 +31,7 @@ namespace SmartGrowing.Function
                 PartitionKey = "111")]out Plant item,
             ILogger log)
         {
-            string temperature = "";
-            string humidity = "";
+            string[] values = { };
 
             var exceptions = new List<Exception>();
 
@@ -40,8 +39,10 @@ namespace SmartGrowing.Function
             {
                 try
                 {
-                    humidity = eventData.Body[0].ToString();
-                    temperature = eventData.Body[1].ToString();
+                    var payload = Encoding.UTF8.GetString(eventData.Body);
+                    Console.WriteLine(payload);
+
+                    values = payload.Split();
                 }
                 catch (Exception e)
                 {
@@ -59,7 +60,7 @@ namespace SmartGrowing.Function
             if (exceptions.Count == 1)
                 throw exceptions.Single();
 
-            item = new Plant { id = "1", name = "Plant 1", description = "Plant next to me.", humidity = humidity, temperature = temperature };
+            item = new Plant { id = "1", name = "Plant 1", description = "Plant next to me.", humidity = values[0], temperature = values[1] };
         }
     }
 }

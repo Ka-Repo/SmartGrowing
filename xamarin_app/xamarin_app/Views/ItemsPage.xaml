@@ -52,12 +52,12 @@
                                     FontSize="13"
                                     LineBreakMode="NoWrap"
                                     Style="{DynamicResource ListItemDetailTextStyle}"
-                                    Text="{Binding Humidity}" />
+                                    Text="{Binding Path=Humidity, StringFormat='Humidity: {0:F2} %'}" />
                                 <Label
                                     FontSize="13"
                                     LineBreakMode="NoWrap"
                                     Style="{DynamicResource ListItemDetailTextStyle}"
-                                    Text="{Binding Temperature}" />
+                                    Text="{Binding Path=Temperature, StringFormat='Temperature: {0:F2} C'}" />
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer
                                         Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"
