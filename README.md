@@ -13,7 +13,7 @@
 
 ## Preprequisites
 
-- Raspberry pi with dht11 sensor
+- Raspberry pi, breadboard and dht11 sensor
 - Python > 3.5
 - Azure Account
 - Azure Event Hub
@@ -72,16 +72,29 @@ On your Raspberry Pi run the following commands:
 
    ```
 
+   The setup should look like this.
+
+   <br>
+   <img src="raspberrypi_setup.png" alt="raspberry pi connected to dht11 sensor" height="300">
+
+<br>
+
 5. Create cron-job to execute smart_growing.py every minute.
 
    ```
+   crontab -e
 
+   Add ***** \<path-to-script>\smart_growing.py to end of file.
+
+   Check out https://crontab.guru/ for examples on how to use cron.
    ```
 
 <br>
 Now you should be able to run the SmartGrowing/python_scripts/smart_growing.py script from this repository.
 
 To set up an Event Hub continue to section II.
+
+<br>
 
 ## Getting started II - Azure
 
