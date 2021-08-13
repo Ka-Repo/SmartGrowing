@@ -51,7 +51,7 @@ On your Raspberry Pi run the following commands:
    pip install azure-eventhub-checkpointstoreblob-aio
    ```
 
-3. Add the following lines to your /home/pi/.profile to establish os variables containing your Event Hub auth information. Replace `<your-connection-string>` and `<your-event-hub-name>` with your Azure Event Hub connection string and name under SAS (Shared Access Signature) in your azure account.
+3. Add the following lines to your /home/pi/.profile (if bash is your login shell as per default on raspbian) to establish os variables containing your Event Hub auth information. Replace `<your-connection-string>` and `<your-event-hub-name>` with your Azure Event Hub connection string and name under SAS (Shared Access Signature) in your azure account.
 
    ```
    EVENT_HUB_CONN_STR=Endpoint='<your-connection-string>'
@@ -65,13 +65,13 @@ On your Raspberry Pi run the following commands:
    ```
    Plugin DHT11 sensor into breadboard.
 
-   Connect 4.7 Ω resistor to pin 1 and 2 on the DHT11.
+   Connect 4.7 Ω resistor (yellow, purple, black, brown, gold) to pin 1 and 2 on the DHT11.
 
    Connect 3.3 V power supply (pin 1 on Raspberry Pi 3) to pin 1 on DHT11.
 
-   Connect pin 4 on Raspberry Pi to DHT11 pin 2.
+   Connect gpio 4 on Raspberry Pi (pin 7) to DHT11 pin 2.
 
-   Connect ground (pin 4 on Raspberry Pi 3) to DHT11 pin 4.
+   Connect ground (pin 9 on Raspberry Pi 3) to DHT11 pin 4.
 
    ```
 
