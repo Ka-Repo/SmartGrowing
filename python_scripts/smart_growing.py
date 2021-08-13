@@ -37,7 +37,7 @@ if __name__ == "__main__":
     # Wait for async request to complete.
     loop = asyncio.get_event_loop()
     start_time = time.time()
-    loop.run_until_complete(send_async([humidity, temperature]))
+    loop.run_until_complete(send_async([str(humidity) + " " + str(temperature)]))
 
     print("Sent messages in {} seconds.".format(time.time() - start_time))
     print('Sent temperature: {0:0.1f} C'.format(temperature) + ' to Azure.')
