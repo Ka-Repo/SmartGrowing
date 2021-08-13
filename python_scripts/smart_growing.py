@@ -5,8 +5,8 @@ import asyncio
 from azure.eventhub.aio import EventHubProducerClient
 from azure.eventhub import EventData
 
-CONNECTION_STR = 'Endpoint=sb://smartgrowingehub.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=FZsiRqg7Q1gYsriITibMQ2mFDOSlroP9mCvfyk8tWKw='
-EVENTHUB_NAME = 'smartgrowingeventhub'
+CONNECTION_STR = os.environ['EVENT_HUB_CONN_STR']
+EVENTHUB_NAME = os.environ['EVENT_HUB_NAME']
 
 sensor = Python_DHT.DHT11
 pin = 4
