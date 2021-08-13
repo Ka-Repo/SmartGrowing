@@ -48,6 +48,7 @@ On your Raspberry Pi run the following commands:
    ```
    pip3 install azure-eventhub
 
+   pip install azure-eventhub-checkpointstoreblob-aio
    ```
 
 3. Replace connection string `CONNECTION_STR` and Azure Event Hub Name `EVENTHUB_NAME` with your Azure Event Hub connection string and name under SAS (Shared Access Signature) in your azure account.
