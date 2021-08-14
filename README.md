@@ -92,7 +92,7 @@ On your Raspberry Pi run the following commands:
    ```
    crontab -e
 
-   Add * * * * * python3 /home/pi/<path-to-script>/smart_growing.py >> /home/pi/log.txt to end of file.
+   Add * * * * * . $HOME/.profile; python3 /home/pi/<path-to-script>/smart_growing.py >> /home/pi/log.txt to end of file.
 
    Check out https://crontab.guru/ for examples on how to use cron.
    ```
