@@ -33,6 +33,8 @@ On your Raspberry Pi run the following commands:
 1. Install Python and DHT11-Toolkit.
 
    ```
+   sudo apt-get update
+
    sudo apt-get install build-essential python3-dev
 
    git clone https://github.com/coding-world/Python_DHT.git
@@ -48,15 +50,18 @@ On your Raspberry Pi run the following commands:
    ```
    pip3 install azure-eventhub
 
-   pip install azure-eventhub-checkpointstoreblob-aio
+   pip3 install azure-eventhub-checkpointstoreblob-aio
    ```
 
-3. Add the following lines to your /home/pi/.profile (if bash is your login shell as per default on raspbian) to establish os variables containing your Event Hub auth information. Replace `<your-connection-string>` and `<your-event-hub-name>` with your Azure Event Hub connection string and name under SAS (Shared Access Signature) in your azure account.
+3. Add the following lines to your /home/pi/.profile (right click -> show hidden files, if bash is your login shell as per default on raspbian) to establish os variables containing your Event Hub auth information. Replace `<your-connection-string>` and `<your-event-hub-name>` with your Azure Event Hub connection string and name under SAS (Shared Access Signature) in your azure account.
 
    ```
    EVENT_HUB_CONN_STR=Endpoint='<your-connection-string>'
+
    export EVENT_HUB_CONN_STR
+
    EVENT_HUB_NAME='<your-event-hub-name>'
+
    export EVENT_HUB_NAME
    ```
 
