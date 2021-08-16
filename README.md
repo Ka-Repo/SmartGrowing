@@ -108,4 +108,26 @@ To set up an Event Hub continue to section II.
 
 <br>
 
+1. Create a free Azure account with 200$ credit.
+
+<br>
+
+2. Create an Azure Event Hub according to
+
+<br>
+
+3. Create an Azure AD using the following instruktions
+
+<br>
+
+4. Create an Azure Cosmos DB
+
+<br>
+
+5. Upload the Azure Function
+
+<br>
+
 ## Getting started III - Xamarin.Forms
+
+Open the Visual Studio solution in the folder SmartGrowing/xamarin_app and replace the values in SmartGrowing/xamarin_app/xamarin_app/Helpers with your Azure credentials.
