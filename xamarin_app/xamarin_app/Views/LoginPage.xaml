@@ -10,13 +10,11 @@
     <ContentPage.Content>
         <StackLayout Margin="30" VerticalOptions="CenterAndExpand">
             <Button
-                x:Name="loginButton"
                 Margin="10"
                 Padding="5"
-                Clicked="OnLoginButtonClicked"
+                Command="{Binding LogoutCommand}"
                 Text="sign in"
-                VerticalOptions="Center" 
-                />
+                VerticalOptions="Center" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

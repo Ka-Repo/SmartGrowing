@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Windows.Input;
 using Xamarin.Forms;
+using xamarin_app.Services;
 using xamarin_app.Views;
 
 namespace xamarin_app.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        public Command LoginCommand { get; }
+        public ICommand LoginCommand { get; }
+        public ICommand LogoutCommand { get; }
 
         public LoginViewModel()
         {
-            LoginCommand = new Command(OnLoginClicked);
+            LoginCommand = new Command((async () => await Shell.Current.GoToAsync($"//{nameof(AboutPage)}")));
+            LogoutCommand = new Command(async () => await AuthService.Login());
         }
-
-        // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-        private async void OnLoginClicked(object obj) => await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
     }
 }
