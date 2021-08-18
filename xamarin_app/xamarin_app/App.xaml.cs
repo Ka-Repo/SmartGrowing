@@ -1,10 +1,7 @@
 ﻿using Microsoft.Identity.Client;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using xamarin_app.Helpers;
 using xamarin_app.Services;
-using xamarin_app.Views;
 
 namespace xamarin_app
 {
@@ -26,18 +23,6 @@ namespace xamarin_app
 
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
-        }
-
-        protected override void OnStart()
-        {
-        }
-
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
         }
     }
 }

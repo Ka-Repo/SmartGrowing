@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace xamarin_app.Helpers
+﻿namespace xamarin_app.Helpers
 {
     public static class Constants
     {
@@ -23,8 +19,6 @@ namespace xamarin_app.Helpers
 
         // set to a unique value for your app, such as your bundle identifier. Used on iOS to share keychain access.
         static readonly string iosKeychainSecurityGroup = "com.xamarin.adb2cauthorization";
-
-
 
         // The following fields and properties should not need to be changed
         static readonly string[] scopes = { "" };
