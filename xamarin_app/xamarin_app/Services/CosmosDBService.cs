@@ -26,7 +26,7 @@ namespace xamarin_app.Services
 
             try
             {
-                docClient = new DocumentClient(new Uri(APIKeys.CosmosEndpointUrl), APIKeys.CosmosAuthKey);
+                docClient = new DocumentClient(new Uri(Constants.CosmosEndpointUrl), Constants.CosmosAuthKey);
 
                 // Create the database - this can also be done through the portal
                 await docClient.CreateDatabaseIfNotExistsAsync(new Database { Id = databaseName });
