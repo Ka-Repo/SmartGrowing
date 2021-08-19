@@ -64,7 +64,6 @@ namespace xamarin_app.Services
             }
             catch (MsalException)
             {
-                // Do nothing - ErrorCode will be displayed in OnLoginButtonClicked
                 return null;
             }
         }
