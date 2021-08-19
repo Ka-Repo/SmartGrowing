@@ -6,10 +6,10 @@
          *  Cosmos DB constants
          */
 
-        // Azure Cosmos DB endpoint here
+        // set your Azure Cosmos DB endpoint, for example "https://contosocosmosdb.documents.azure.com:443/"
         public static readonly string CosmosEndpointUrl = "https://smartgrowingcosmosdb.documents.azure.com:443/";
 
-        // Azure Cosmos DB authentication key
+        // set your Azure Cosmos DB authentication key, for example "llkP4rr0Hn3ixfYGrrkP4rr0Hn3ixfYGXEgt0uV3atOpcn9Soh5q6tYh0T7BwLsQrmT5SVycUAlYpeh5MlwyyQ!=" 
         public static readonly string CosmosAuthKey = "rrkP4rr0Hn3ixfYGXEgt0uV3atOpcn9Soh5qP1tqX1bisumF86tYh0T7BwLsQrmT5SVycUAlYpeh5Mlp5AwQQQ==";
 
         /**
