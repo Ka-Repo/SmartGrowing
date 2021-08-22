@@ -130,4 +130,4 @@ To set up an Event Hub continue to section II.
 
 ## Getting started III - Xamarin.Forms
 
-Open the Visual Studio solution in the folder SmartGrowing/xamarin_app and replace the values in SmartGrowing/xamarin_app/xamarin_app/Helpers with your Azure credentials.
+Open the Visual Studio solution in the folder SmartGrowing/xamarin_app and replace the values in SmartGrowing/xamarin_app/xamarin_app/Helpers/Constants.cs with your Azure information.
