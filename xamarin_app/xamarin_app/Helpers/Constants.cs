@@ -7,32 +7,32 @@
          */
 
         // set your Azure Cosmos DB endpoint, for example "https://contosocosmosdb.documents.azure.com:443/"
-        public static readonly string CosmosEndpointUrl = "https://smartgrowingcosmosdb.documents.azure.com:443/";
+        public static readonly string CosmosEndpointUrl = "<your-cosmos-db-url>";
 
         // set your Azure Cosmos DB authentication key, for example "llkP4rr0Hn3ixfYGrrkP4rr0Hn3ixfYGXEgt0uV3atOpcn9Soh5q6tYh0T7BwLsQrmT5SVycUAlYpeh5MlwyyQ!=" 
-        public static readonly string CosmosAuthKey = "rrkP4rr0Hn3ixfYGXEgt0uV3atOpcn9Soh5qP1tqX1bisumF86tYh0T7BwLsQrmT5SVycUAlYpeh5Mlp5AwQQQ==";
+        public static readonly string CosmosAuthKey = "<your-cosmos-db-auth-key>";
 
         /**
          *  Azure AD B2C constants
          */
 
         // set your tenant name, for example "contoso123tenant"
-        static readonly string tenantName = "smartgrowingb2c";
+        static readonly string tenantName = "<your-ad-b2c-name>";
 
         // set your tenant id, for example: "contoso123tenant.onmicrosoft.com"
-        static readonly string tenantId = "smartgrowingb2c.onmicrosoft.com";
+        static readonly string tenantId = "<your-ad-b2c-tenant-id>";
 
         // set your client/application id, for example: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
-        static readonly string clientId = "63a8c700-41e9-45c2-973e-8e33e5fb687d";
+        static readonly string clientId = "<your-ad-b2c-client-id>";
 
         // set your sign up/in policy name, for example: "B2C_1_signupsignin"
-        static readonly string policySignin = "B2C_1_signup";
+        static readonly string policySignin = "<your-ad-b2c-signin-policy-name>";
 
         // set your forgot password policy, for example: "B2C_1_passwordreset"
-        static readonly string policyPassword = "B2C_1_signup";
+        static readonly string policyPassword = "<your-ad-b2c-forgot-password-policy-name>";
 
         // set to a unique value for your app, such as your bundle identifier. Used on iOS to share keychain access.
-        static readonly string iosKeychainSecurityGroup = "com.xamarin.adb2cauthorization";
+        static readonly string iosKeychainSecurityGroup = "<your-ios-bundle-id>";
 
         // The following fields and properties should not need to be changed
         static readonly string[] scopes = { "" };
