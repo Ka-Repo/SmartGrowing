@@ -123,7 +123,7 @@ To set up an Event Hub continue to section II.
 
 <br>
 
-3. Create an Azure AD using the following at https://docs.microsoft.com/de-de/azure/active-directory/develop/quickstart-create-new-tenant .
+3. Create an Azure AD according to https://docs.microsoft.com/de-de/azure/active-directory/develop/quickstart-create-new-tenant .
 
 <br>
 
