@@ -40,8 +40,6 @@ namespace SmartGrowing.Function
                 try
                 {
                     var payload = Encoding.UTF8.GetString(eventData.Body);
-                    Console.WriteLine(payload);
-
                     values = payload.Split();
                 }
                 catch (Exception e)
