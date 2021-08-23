@@ -83,7 +83,7 @@ On your Raspberry Pi run the following commands:
    The setup should look like this.
 
    <br>
-   <img src="raspberrypi_setup.png" alt="raspberry pi connected to dht11 sensor" height="300">
+   <img src="assets/raspberrypi_setup.png" alt="raspberry pi connected to dht11 sensor" height="300">
 
 <br>
 
@@ -124,7 +124,43 @@ To set up an Event Hub continue to section II.
 
 <br>
 
-5. Upload the Azure Function
+5. Azure Function
+
+   <br>
+
+   To run the Functions-App you will need Visual Studio Code and the following plugins for Azure.
+
+   <br>
+   <img src="assets/vscextension.png" alt="azure extensions for Visual Studio Code" height="100">
+   <br>
+   <br>
+
+   Open the the folder SmartGrowing/azure_functions in Visual Studio Code.
+   To debug local edit the local.settings.json and add the following information. Of course replace `<your-event-hub-connection-string>` and `<your-cosmos-db-connection-string>` with the accurate information from your azure account.
+
+   <br>
+
+   ```
+   "AzureEventHubConnectionString": "<your-event-hub-connection-string>",
+
+   "CosmosDBConnection": "<your-cosmos-db-connection-string>"
+   ```
+
+   To deploy the Functions-App to Azure you will need to add the same information in the config of your functions app (Azure portal) as seen in the following image.
+
+   <br>
+
+   <img src="assets/function_config.png" alt="azure extensions for Visual Studio Code">
+
+   <br>
+
+   <br>
+
+   To deploy the function to Azure just hit the cloud icon.
+
+   <br>
+
+   <img src="assets/deploy_function.png" alt="azure extensions for Visual Studio Code">
 
 <br>
 
