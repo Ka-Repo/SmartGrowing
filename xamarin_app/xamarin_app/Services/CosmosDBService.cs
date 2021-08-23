@@ -95,7 +95,7 @@ namespace xamarin_app.Services
             await docClient.ReplaceDocumentAsync(docUri, plant);
         }
 
-        public async static Task DeleteToDoItem(Plant plant)
+        public async static Task DeletePlant(Plant plant)
         {
             if (!await Initialize())
                 return;
