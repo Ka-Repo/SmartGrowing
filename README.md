@@ -108,19 +108,19 @@ To set up an Event Hub continue to section II.
 
 <br>
 
-1. Create a free Azure account with 200$ credit.
+1. Create a free Azure account.
 
 <br>
 
-2. Create an Azure Event Hub according to
+2. Create an Azure Event Hub according to https://docs.microsoft.com/de-de/azure/event-hubs/event-hubs-create .
 
 <br>
 
-3. Create an Azure AD using the following instruktions
+3. Create an Azure AD using the following at https://docs.microsoft.com/de-de/azure/active-directory/develop/quickstart-create-new-tenant .
 
 <br>
 
-4. Create an Azure Cosmos DB
+4. Create an Azure Cosmos DB according to https://docs.microsoft.com/de-de/azure/cosmos-db/create-cosmosdb-resources-portal .
 
 <br>
 
